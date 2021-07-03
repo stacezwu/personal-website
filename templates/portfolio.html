@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="page-title">
+  <h1>Portfolio</h1>
+  <p>My accomplishments</p>
+</div>
+
+<ul class="portfolio">
+  {% set section = get_section(path="portfolio/_index.md") %}
+  {% for project in section.pages %}
+    <li class="scroll-card">
+      <h2 class="title">{{ project.title }}</h2>
+      <h3 class="subtitle">{{ project.extra.subtitle }} &middot; {{ project.extra.date }}</h3>
+      <p class="description">
+        {{ project.extra.abstract }}
+        <button class="pfl-more">Read more ...</button>
+      </p><div class="content" style="display:none">
+        {{ project.content | safe }}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<script>
+  // Scroll effect
+  document.querySelectorAll(".scroll-card").forEach(function(card, idx) {
+    window.addEventListener("scroll", function() {
+      var scroll = window.pageYOffset;
+      var offset = card.offsetTop;
+      var height = card.scrollHeight;
+      var fromTop = window.innerHeight / 4;
+
+      var end = offset + height;
+      var endReached = scroll + fromTop >= end;
+
+      var translate;
+      var scale;
+      if (endReached) {
+        translate = scroll + fromTop - end;
+        scale = 1 - 0.02 * translate / 150;
+      } else {
+        translate = 0;
+        scale = 1;
+      }
+      card.style.transform = "translate(0px,"
+        .concat(translate)
+        .concat("px)")
+        .concat(" scale(")
+        .concat(scale)
+        .concat(")");
+      card.style.opacity = Math.max(0, 1 - translate / 150);
+    });
+  });
+
+  // Show / hide the details on click
+  document.querySelectorAll(".pfl-more").forEach(function(btn) {
+    btn.onclick = function(e) {
+      var content = e.target.parentNode.nextSibling;
+      console.log(content);
+      if (content.style.display == "none") {
+        content.style.display = "block";
+        e.target.innerHTML = "Read less ...";
+      } else {
+        content.style.display = "none";
+        e.target.innerHTML = "Read more ...";
+      }
+    };
+  });
+</script>
+{% endblock %}

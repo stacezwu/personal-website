@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="page-title timeline__hero">
+  <h1>To be continued</h1>
+  <p>Maybe <a href="https://www.linkedin.com/in/stacey-wu/">hire me</a>?</p>
+</div>
+
+<ul class="timeline">
+  {% set events = load_data(path="data/timeline.json") %}
+  {% for event in events %}
+  <li class="{{ event.type }}">
+    <div class="brief">
+      <img class="logo" src="/image/logo/{{ event.logo }}">
+      <h2 class="title">{{ event.title }}</h2>
+      <h3 class="data">
+        {{ event.date }}
+        &middot;
+        <button class="tl-more">more details</button>
+      </h3>
+    </div>
+    <div class="dot"></div>
+    <div class="detail">
+      <p>
+        {{ event.info }}
+      </p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+<script>
+  // Show / hide the details on click
+  document.querySelectorAll(".tl-more").forEach(function(btn) {
+    btn.onclick = function(e) {
+      e.target.parentNode.parentNode.parentNode.classList.toggle("show-detail");
+    };
+  });
+</script>
+{% endblock %}

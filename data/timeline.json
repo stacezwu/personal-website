@@ -1,0 +1,58 @@
+[
+  {
+    "type": "left",
+    "logo": "deutsche.png",
+    "title": "Sales and Trading Summer Intern",
+    "date": "September 2018",
+    "info": "I am completing an internship as a trader with multiple trading desks, focusing on transportation finance and emerging markets."
+  },
+  {
+    "type": "left",
+    "logo": "goldman.png",
+    "title": "Women Trader Academy",
+    "date": "Oct 2020 to Nov 2020",
+    "info": "I learned about Goldman Sachs approach to trading and how their trading teams work together to help advance sustainable economic growth. During the program I was also one of the most successful traders in a trading simulation competition."
+  },
+  {
+    "type": "left",
+    "logo": "icr.png",
+    "title": "Research Intern",
+    "date": "Jul 2020",
+    "info": "I worked on a signal processing application to improve the speed with which data could be processed. To accomplish this, I worked with an existing C++ pipeline and extended it to include further steps of the algorithm which were previously processed in MatLab."
+  },
+  {
+    "type": "left",
+    "logo": "janestreet.png",
+    "title": "WiTT (Women in Trading and Technology) Program",
+    "date": "Sept 2020",
+    "info": "I explored the intersection of trading with technology, as well as learned about functional programming and it's applications for trading. During the program, I completed a project using OCaml, and due to the remote nature of the event had to solve many problems around running and connecting to a remote server for development."
+  },
+  {
+    "type": "left",
+    "logo": "lseg.png",
+    "title": "London Stock Exchange Group, Virtual Experience Tech Internship",
+    "date": "Jul 2020",
+    "info": "I interned from home during the COVID pandemic, learning about the technology powering the trading, as well as exploring the potential of upcoming technologies like cloud computing for trading applications."
+  },
+  {
+    "type": "right",
+    "logo": "icwb.png",
+    "title": "Imperial College Women in Business, Head of Sponsorship and Events",
+    "date": "Oct 2018 to Jul 2020",
+    "info": "I handled the sponsorship activities, including reaching out to interested companies and striking sponsorship deals for the events run by the society."
+  },
+  {
+    "type": "right",
+    "logo": "imperial.png",
+    "title": "MEng Electronic and Information Engineering (that's computer engineering for those uneducated swines in the back)",
+    "date": "Sept 2018",
+    "info": "Doing my undergraduate degree in electronic and information engineering I attended courses in Mathematics (Calculus, Linear Algebra, Vector Calculus, Complex Numbers and Integral Transforms, Signal Processing), Signal Processing, C++ Programming, Compiler Design, Digital Systems Design (FPGA), Machine Learning, Embedded Systems, Networking, and completed many technical group and individual projects."
+  },
+  {
+    "type": "right",
+    "logo": "dgs.jpg",
+    "title": "Diocesan Girls' School (拔萃女書院)",
+    "date": "until July 2018",
+    "info": "Beyond studying the usual school subjects, I moved to Hong Kong from Yangzhou (扬州) and lived there independently from a young age. This has thought me many things about self-organization, teaching myself Cantonese, and navigating differences between cultures."
+  }
+]
