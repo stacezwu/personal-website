@@ -5,6 +5,7 @@ date = "2021-06-24"
 [extra]
 subtitle = "Running neural networks on a micro controller"
 date = "June 2021"
+link = "https://github.com/stacezwu/Project-EMILY"
 abstract = "Machine learning is traditionally very resource intensive. In this project, we made use of Tensorflow Lite to port small speech recognition models to an embedded computing device with highly constrained memory and cpu speed. The models can recognize and distinguish multiple English words."
 +++
 

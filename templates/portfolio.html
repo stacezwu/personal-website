@@ -10,7 +10,11 @@
   {% for project in section.pages %}
     <li class="scroll-card">
       <h2 class="title">{{ project.title }}</h2>
-      <h3 class="subtitle">{{ project.extra.subtitle }} &middot; {{ project.extra.date }}</h3>
+      <h3 class="subtitle">{{ project.extra.subtitle }} &middot; {{ project.extra.date }} 
+        {% if project.extra.link %}
+          &middot; <a href={{ project.extra.link }}>Link</a>
+        {% endif %}
+        </h3>
       <p class="description">
         {{ project.extra.abstract }}
         <button class="pfl-more">Read more ...</button>

@@ -9,6 +9,7 @@
 <ul class="timeline">
   {% set events = load_data(path="data/timeline.json") %}
   {% for event in events %}
+  {% if not event.hidden %}
   <li class="{{ event.type }}">
     <div class="brief">
       <img class="logo" src="/image/logo/{{ event.logo }}">
@@ -26,6 +27,7 @@
       </p>
     </div>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
 

@@ -5,6 +5,7 @@ date = "2021-02-24"
 [extra]
 subtitle = "We designed and built a device to monitor plants water levels"
 date = "February 2021"
+link = "https://stacezwu.github.io/embedded-web/"
 abstract = "Keeping plants hydrated is very important, but it can be easy to forgot to water a plant regularly. To assist with this, my team built a display to indicate water levels, powered by a raspberry pi, as well as a web interface which receives data from the device via MQTT."
 +++
 
@@ -25,4 +26,7 @@ To display the water level, I built a physical gauge and connected it to the mot
 
 Finally to build the web interface I set up a python based web server. This server responds to HTTP requests, and receives updates from our device via the MQTT protocol. I also implemented the MQTT protocol on the device side to send updates, and set up a local MQTT broker to allow for real time communication between both parts.
 
-![](/image/portfolio/plant.png)
+<!-- ![](/image/portfolio/plant.png) -->
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3bfmrBaaDI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>

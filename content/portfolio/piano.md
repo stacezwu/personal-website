@@ -21,6 +21,8 @@ My other major contribution was to propose and implement the use of the [CORDIC]
 
 To enable as many keys as possible to be pressed, but also retain a good quality audio, the CORDIC algorithm can adapt to take varying numbers of cycles depending on how many keys are pressed simultaneously. This allows for more keys to be pressed, while preserving the resolution of the wave-form when only one or two keys are active.
 
-![](/image/portfolio/piano.png)
-
+<!-- ![](/image/portfolio/piano.png) -->
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4nFFqUFb_EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 

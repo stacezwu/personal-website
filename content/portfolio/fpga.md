@@ -5,6 +5,7 @@ date = "2021-04-15"
 [extra]
 subtitle = "I designed a logical circuit to perform a given computation using Verilog"
 date = "April 2021"
+link = "https://stacezwu.github.io/embedded-web/"
 abstract = "The goal of the project was to compute a given expression as efficiently as possible. Starting with a CORDIC algorithm implemented in C and building up to a pipe-lined custom circuit."
 +++
 

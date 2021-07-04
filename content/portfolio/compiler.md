@@ -5,6 +5,7 @@ date = "2020-06-17"
 [extra]
 subtitle = "We built a C to MIPS compiler in C++"
 date = "June 2020"
+link = "https://github.com/stacezwu/C-to-MIPS-complier"
 abstract = "Starting with a C to Python compiler, and building to a partial C to MIPS assembly compiler. The project is written in C++ with a Yacc parser."
 +++
 

@@ -2,16 +2,16 @@
   {
     "type": "left",
     "logo": "deutsche.png",
-    "title": "Sales and Trading Summer Intern",
+    "title": "Deutsche Bank, Sales and Trading Summer Intern",
     "date": "September 2018",
-    "info": "I am completing an internship as a trader with multiple trading desks, focusing on transportation finance and emerging markets."
+    "info": "I am completing an internship as a trader with multiple trading desks, focusing on global transportation finance within structured credit desk and emerging markets."
   },
   {
     "type": "left",
     "logo": "goldman.png",
     "title": "Women Trader Academy",
     "date": "Oct 2020 to Nov 2020",
-    "info": "I learned about Goldman Sachs approach to trading and how their trading teams work together to help advance sustainable economic growth. During the program I was also one of the most successful traders in a trading simulation competition."
+    "info": "I learned about Goldman Sachs approach to trading and how their trading teams work together to help advance sustainable economic growth. During the program I was ranked 2nd in a trading simulation competition."
   },
   {
     "type": "left",
@@ -35,6 +35,7 @@
     "info": "I interned from home during the COVID pandemic, learning about the technology powering the trading, as well as exploring the potential of upcoming technologies like cloud computing for trading applications."
   },
   {
+    "hidden": true,
     "type": "right",
     "logo": "icwb.png",
     "title": "Imperial College Women in Business, Head of Sponsorship and Events",
@@ -53,6 +54,6 @@
     "logo": "dgs.jpg",
     "title": "Diocesan Girls' School (拔萃女書院)",
     "date": "until July 2018",
-    "info": "Beyond studying the usual school subjects, I moved to Hong Kong from Yangzhou (扬州) and lived there independently from a young age. This has thought me many things about self-organization, teaching myself Cantonese, and navigating differences between cultures."
+    "info": "Beyond studying the usual school subjects, I moved to Hong Kong from Yangzhou (扬州) and lived there independently from a young age. This has taught me many things about self-organization, teaching myself Cantonese, and navigating differences between cultures."
   }
 ]
