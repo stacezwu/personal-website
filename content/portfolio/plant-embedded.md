@@ -26,5 +26,3 @@ To display the water level, I built a physical gauge and connected it to the mot
 Finally to build the web interface I set up a python based web server. This server responds to HTTP requests, and receives updates from our device via the MQTT protocol. I also implemented the MQTT protocol on the device side to send updates, and set up a local MQTT broker to allow for real time communication between both parts.
 
 ![](/image/portfolio/plant.png)
-
-(This was the only image I had of this, sorry 🥺. I remembered you had a demo video, which is much better probably.)

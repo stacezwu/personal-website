@@ -23,5 +23,4 @@ To enable as many keys as possible to be pressed, but also retain a good quality
 
 ![](/image/portfolio/piano.png)
 
-(This was again the only image I had of this, sorry 🥺. Maybe you can put the awesome music video you made here?)
 
