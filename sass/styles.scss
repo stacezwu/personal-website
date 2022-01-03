@@ -151,8 +151,71 @@ body, html {
     font-size: 16px;
     font-weight: 800;
     color: $coral;
+    max-width: 500px;
+    margin: auto;
   }
+
 }
+
+/*
+ * Ordered list
+ */
+ .ordered-list{
+  width: 100%;
+  padding: 20px 48px;
+  text-align: center;
+  .circled-list {
+    margin: 30px auto;
+    list-style: decimal;
+    list-style-position: inside;
+
+    &::before {
+      display: block;
+      margin: -32px calc(50% - 15px) 0px auto;
+      height: 30px;
+      width: 30px;
+      content: "";
+      border: 2px solid $coral;
+      border-radius: 100%;
+    }
+    &::marker {
+      font-size: 24px;
+      margin: 0;
+      font-family: $font-serif;
+      color: $coral;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-style: normal;
+    }
+    h2 {
+      font-size: 16px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .unordered-list {
+      width: 100%;
+      margin: 10px auto;
+      text-align: left;
+
+      li {
+        margin: auto;
+        list-style: square;
+        list-style-position: outside;
+        max-width: 500px;
+        &::marker {
+          color: $coral;
+          font-size: 1.5em;
+        }
+      }
+
+    }
+
+  }
+ }
 
 /*
  * Timeline page

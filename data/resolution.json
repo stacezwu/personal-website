@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Fitness",
+    "description": ["Work out at least 3 times a week", "Keep weight under xxx", "Swim once a week"]
+  },
+  {
+    "title": "Work",
+    "description": ["Work on an open-source project", "Improve code quality"]
+  },
+  {
+    "title": "Diet",
+    "description": ["Drink 1L water every day", "Eat more protein and less junk food", "At most 1 Maccies/KFC/FiveGuys/Fried chicken every month", "Less sugar drinks", "Cut down coffee intake"]
+  },
+  {
+    "title": "Mind",
+    "description": ["Watch less than 30 min TikTok/Reel/Wechat Videos a day", "Read at least 1 book"]
+  }
+]
