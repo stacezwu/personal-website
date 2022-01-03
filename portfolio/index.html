@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stacey</title>
+    <link rel="stylesheet" href="https:&#x2F;&#x2F;www.staceywu.co.uk&#x2F;styles.css?h=28e5447085727c40ebc163ac2037f4426686a34f1517d130dd063d7e8b9aa393">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="header">
+  <a href="/" class="header__name"></a>
+  <ul class="header__links">
+    <li><a href="/">Timeline</a></li>
+    <li><a href="/portfolio">Portfolio</a></li>
+    <li><a href="/resolution">Resolution</a></li>
+    <li><a href="/food">Food Blog</a></li>
+  </ul>
+</header>
+    <div class="body">
+      
+<div class="page-title">
+  <h1>Portfolio</h1>
+  <p>My accomplishments</p>
+</div>
+
+<ul class="portfolio">
+  
+  
+    <li class="scroll-card">
+      <h2 class="title">Word recognition on a micro controller</h2>
+      <h3 class="subtitle">Running neural networks on a micro controller &middot; June 2021 
+        
+          &middot; <a href=https:&#x2F;&#x2F;github.com&#x2F;stacezwu&#x2F;Project-EMILY>Link</a>
+        
+        </h3>
+      <p class="description">
+        Machine learning is traditionally very resource intensive. In this project, we made use of Tensorflow Lite to port small speech recognition models to an embedded computing device with highly constrained memory and cpu speed. The models can recognize and distinguish multiple English words.
+        <button class="pfl-more">Read more ...</button>
+      </p><div class="content" style="display:none">
+        <h1 id="about-this-project">About this Project</h1>
+<p>For our industrial project with ARM, we were tasked to build a speech recognition model and run it on a highly resource constrained micro controller.</p>
+<p>To accomplish this task we had to collect training data, design a good but constrained neural network, and then train the neural network on the training data.</p>
+<p>Once a network was trained, it was to be quantized, i.e. turned into a fixed-point representation, such that it can run in an adequate time and consume less memory on the micro controller.</p>
+<p>Finally, we had to built and test a control code for the micro controller, which is a C program that includes the Tensorflow lite library, as well as facilities to load and run the model obtained in the previous step.</p>
+<p>This program is also responsible for gathering input data from the sensors, as well as communicating the inference results back to the outside world.</p>
+<p>Our final product packaged all of these pieces up into a GUI written in Python.</p>
+<h1 id="my-contribution">My Contribution</h1>
+<ul>
+<li>I leveraged grid search algorithms to determine good small model candidates and train them on our available data</li>
+<li>I wrote C routines to decode and load the model into Tensorflow Lite, as well as run the model on the micro controller and communicate with the sensors</li>
+<li>Collaborated intensively with my group members to integrate these parts of the process with a unified GUI written in Python</li>
+</ul>
+<p><img src="/image/portfolio/arduino.png" alt="" />
+The micro controller we used to run the neural network.</p>
+
+      </div>
+    </li>
+  
+    <li class="scroll-card">
+      <h2 class="title">Design a custom FPGA Circuit</h2>
+      <h3 class="subtitle">I designed a logical circuit to perform a given computation using Verilog &middot; April 2021 
+        
+          &middot; <a href=https:&#x2F;&#x2F;stacezwu.github.io&#x2F;embedded-web&#x2F;>Link</a>
+        
+        </h3>
+      <p class="description">
+        The goal of the project was to compute a given expression as efficiently as possible. Starting with a CORDIC algorithm implemented in C and building up to a pipe-lined custom circuit.
+        <button class="pfl-more">Read more ...</button>
+      </p><div class="content" style="display:none">
+        <h1 id="the-project">The Project</h1>
+<p>The goal of the project was to compute the expression:</p>
+<center>
+0.5x + x^2 * cos((x - 128) / 128)
+</center>
+<p>The initial task was to implement this function in C and use it to compute this formula over a large range of inputs <code>x</code>, and then compute the sum of all the intermediate results.</p>
+<p>For the second task, I designed a custom instruction for <code>0.5 * a + b</code>, with floating point inputs
+<code>a</code> and <code>b</code>, which can be used for part of the above formula.</p>
+<p>The key step to computing the above formula efficiently is to compute the cosine of some value. To do so efficiently, I implemented the <a href="https://en.wikipedia.org/wiki/CORDIC">CORDIC</a> algorithm as a custom instruction, operating on fixed point binary inputs.</p>
+<p>CORDIC will compute the sin and cosine simultaneously, but for the above formula only the cosine was required and used.</p>
+<p>In the final part of the project, these parts where combined into a single instruction. Once this was accomplished, I further improved upon the resource and memory utilization by implementing unrolled and partially-unrolled pipe-lined designs.</p>
+<p>All these circuits where designed using the Verilog HDL, and tested using simulations, as well as by running on actual FPGA hardware.</p>
+
+      </div>
+    </li>
+  
+    <li class="scroll-card">
+      <h2 class="title">Program Sound Synthesis on an Embedded Processor</h2>
+      <h3 class="subtitle">We built a small piano &middot; March 2021 
+        
+        </h3>
+      <p class="description">
+        We build a music synthesis program using an embedded processor to generate the wave form in real time based on current keyboard inputs.
+        <button class="pfl-more">Read more ...</button>
+      </p><div class="content" style="display:none">
+        <h1 id="the-project">The Project</h1>
+<p>Using an embedded processor and a keyboard input device, we built a small electric piano. The piano can play multiple keys at once, plays correct wave-forms for the musical notes by generating overlapping sinus wave-forms in real time as keys are pressed.</p>
+<p>It also modulates the amplitude of each note component, depending on how long the corresponding key has been pressed for, reducing the amplitude (loudness) over time to simulate a physical piano.</p>
+<h1 id="my-contributions">My Contributions</h1>
+<p>I programmed the display logic and interrupts, which are responsible for decoding the inputs coming from the key-pad. The display shows which chord is pressed in real time.</p>
+<p>My other major contribution was to propose and implement the use of the <a href="https://en.wikipedia.org/wiki/CORDIC">CORDIC</a> algorithm to efficiently generate the sign wave-forms. On the resource-constrained micro controller, computing these is a non-trivial task.</p>
+<p>To enable as many keys as possible to be pressed, but also retain a good quality audio, the CORDIC algorithm can adapt to take varying numbers of cycles depending on how many keys are pressed simultaneously. This allows for more keys to be pressed, while preserving the resolution of the wave-form when only one or two keys are active.</p>
+<!-- ![](/image/portfolio/piano.png) -->
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4nFFqUFb_EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+      </div>
+    </li>
+  
+    <li class="scroll-card">
+      <h2 class="title">Device to Monitor Plant Water Levels</h2>
+      <h3 class="subtitle">We designed and built a device to monitor plants water levels &middot; February 2021 
+        
+          &middot; <a href=https:&#x2F;&#x2F;stacezwu.github.io&#x2F;embedded-web&#x2F;>Link</a>
+        
+        </h3>
+      <p class="description">
+        Keeping plants hydrated is very important, but it can be easy to forgot to water a plant regularly. To assist with this, my team built a display to indicate water levels, powered by a raspberry pi, as well as a web interface which receives data from the device via MQTT.
+        <button class="pfl-more">Read more ...</button>
+      </p><div class="content" style="display:none">
+        <h1 id="about-the-project">About the project</h1>
+<p>For this project we conceptualized, designed, and implemented an embedded device to monitor plants at home. This works by tracking the water level of plants over time (taking into account the humidity and other environmental factors), to calculate when the plant should next be watered.</p>
+<p>To notify the users of the need to water, we built a physical gauge that can be placed next to the plant, a button to indicate that it has been watered, as well as a web service to check on your plants on the go.</p>
+<h1 id="what-i-did">What I did</h1>
+<p>I implemented communication with different sensors to measure humidity and Co2 concentration.</p>
+<p>This was achieved by studying the sensors datasheets and then implementing their protocols in Python to address the sensors which were connected via the GPIO headers of a raspberry pi.</p>
+<p>In a similar way, I also implemented controls for registering the button click, and controlling a stepper motor to move the gauge.</p>
+<p>To display the water level, I built a physical gauge and connected it to the motor.</p>
+<p>Finally to build the web interface I set up a python based web server. This server responds to HTTP requests, and receives updates from our device via the MQTT protocol. I also implemented the MQTT protocol on the device side to send updates, and set up a local MQTT broker to allow for real time communication between both parts.</p>
+<!-- ![](/image/portfolio/plant.png) -->
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3bfmrBaaDI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+      </div>
+    </li>
+  
+    <li class="scroll-card">
+      <h2 class="title">Custom C Compiler</h2>
+      <h3 class="subtitle">We built a C to MIPS compiler in C++ &middot; June 2020 
+        
+          &middot; <a href=https:&#x2F;&#x2F;github.com&#x2F;stacezwu&#x2F;C-to-MIPS-complier>Link</a>
+        
+        </h3>
+      <p class="description">
+        Starting with a C to Python compiler, and building to a partial C to MIPS assembly compiler. The project is written in C++ with a Yacc parser.
+        <button class="pfl-more">Read more ...</button>
+      </p><div class="content" style="display:none">
+        <h1 id="about-the-project">About the Project</h1>
+<h2 id="translator">Translator</h2>
+<p>In the first deliverable we built a parser for a subset of the C programming language and a C++ compiler which can be used to generate Python code.</p>
+<p>The compiler/ translator for this part supports the following constructs:</p>
+<p><em>Variables:</em></p>
+<ul>
+<li>Local integer variables (though not nested scopes)</li>
+<li>Global integer variables</li>
+<li>No variable shadowing</li>
+</ul>
+<p><em>Functions:</em></p>
+<ul>
+<li>Definition of functions taking 0 or more integer parameters and with void or integer return type</li>
+<li>Explicit support for main special functionality</li>
+</ul>
+<p><em>Statements:</em></p>
+<ul>
+<li>if</li>
+<li>if-else</li>
+<li>while</li>
+<li>return</li>
+<li>sequences</li>
+</ul>
+<p><em>Expressions:</em></p>
+<ul>
+<li>Decimal integer constants</li>
+<li>Integer arithmetic: <code>*</code>,<code>+</code>,<code>-</code></li>
+<li>Logical operations: <code>&amp;&amp;</code>,<code>||</code></li>
+<li>Comparison operations: <code>&lt;</code>,<code>==</code></li>
+<li>Invocation of functions</li>
+<li>Assignment (but only as a direct expression statement)</li>
+</ul>
+<h2 id="mips-compiler">MIPS Compiler</h2>
+<p>For this part of the project, we used the parser and C++ logic we had in place from the translator, and extended it to build a compiler which generates MIPS assembly code.</p>
+<p>We started by implementing a simpler feature-set initially, to be able to compile:</p>
+<ul>
+<li>a file containing just a single function with no arguments</li>
+<li>variables of <code>int</code> type</li>
+<li>local variables</li>
+<li>arithmetic and logical expressions</li>
+<li>if-then-else statements</li>
+<li>while loops</li>
+</ul>
+<p>Once those constructs where working, we moved on to handling progressively more and more complex programs which include:</p>
+<ul>
+<li>files containing multiple functions that call each other</li>
+<li>functions that take up to four parameters</li>
+<li>for loops</li>
+<li>arrays declared globally (i.e. outside of any function in your file)</li>
+<li>arrays declared locally (i.e. inside a function)</li>
+<li>reading and writing elements of an array</li>
+<li>recursive function calls</li>
+<li>the <code>enum</code> keyword</li>
+<li><code>switch</code> statements</li>
+<li>the <code>break</code> and <code>continue</code> keywords</li>
+</ul>
+
+      </div>
+    </li>
+  
+</ul>
+
+<script>
+  // Scroll effect
+  document.querySelectorAll(".scroll-card").forEach(function(card, idx) {
+    window.addEventListener("scroll", function() {
+      var scroll = window.pageYOffset;
+      var offset = card.offsetTop;
+      var height = card.scrollHeight;
+      var fromTop = window.innerHeight / 4;
+
+      var end = offset + height;
+      var endReached = scroll + fromTop >= end;
+
+      var translate;
+      var scale;
+      if (endReached) {
+        translate = scroll + fromTop - end;
+        scale = 1 - 0.02 * translate / 150;
+      } else {
+        translate = 0;
+        scale = 1;
+      }
+      card.style.transform = "translate(0px,"
+        .concat(translate)
+        .concat("px)")
+        .concat(" scale(")
+        .concat(scale)
+        .concat(")");
+      card.style.opacity = Math.max(0, 1 - translate / 150);
+    });
+  });
+
+  // Show / hide the details on click
+  document.querySelectorAll(".pfl-more").forEach(function(btn) {
+    btn.onclick = function(e) {
+      var content = e.target.parentNode.nextSibling;
+      console.log(content);
+      if (content.style.display == "none") {
+        content.style.display = "block";
+        e.target.innerHTML = "Read less ...";
+      } else {
+        content.style.display = "none";
+        e.target.innerHTML = "Read more ...";
+      }
+    };
+  });
+</script>
+
+    </div>
+    <footer class="footer">
+    <a class="link" href="https://www.linkedin.com/in/stacey-wu/">
+        <img class="logo" src="/image/socialmedia/linkedin.svg">
+    </a>
+
+    <a class="link" href="https://github.com/stacezwu">
+        <img class="logo" src="/image/socialmedia/github.svg">
+    </a>
+    
+    <!-- <p>Author: Hege Refsnes<br> -->
+    <!-- <a href="mailto:hege@example.com">hege@example.com</a></p> -->
+  </footer>
+
+  
+  </body>
+</html>

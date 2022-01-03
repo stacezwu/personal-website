@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.staceywu.co.uk/</loc>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/food/</loc>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/portfolio/</loc>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/portfolio/arm-embedded/</loc>
+        <lastmod>2021-06-24</lastmod>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/portfolio/compiler/</loc>
+        <lastmod>2020-06-17</lastmod>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/portfolio/fpga/</loc>
+        <lastmod>2021-04-15</lastmod>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/portfolio/piano/</loc>
+        <lastmod>2021-03-24</lastmod>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/portfolio/plant-embedded/</loc>
+        <lastmod>2021-02-24</lastmod>
+    </url>
+    <url>
+        <loc>https://www.staceywu.co.uk/resolution/</loc>
+    </url>
+</urlset>
